@@ -4,9 +4,9 @@ Spring Boot based application.
 ### Functional-APIs
 * Register-user: http://localhost:8080/api/user/register
 * Login-user: http://localhost:8080/api/user/login
-* Cart-Items: http://localhost:8080/api/cart-items
-* Checkout: http://localhost:8080/api/checkout
-* Billing: http://localhost:8080/api/billing/process-payment <br>
+* Cart-Items(add products in the cart): http://localhost:8080/api/cart-items
+* Checkout(calculate the total price of the cart): http://localhost:8080/api/checkout
+* Billing(make payment): http://localhost:8080/api/billing/process-payment <br>
   <br>
   // Adding a new product and updating the existing product using product id by the seller side
 * Add-Product: http://localhost:8080/api/product
