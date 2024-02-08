@@ -1,1 +1,2 @@
-# E-Commerce-Dummy-INT
+## E-Commerce-Dummy-INT
+Spring Boot based application.
