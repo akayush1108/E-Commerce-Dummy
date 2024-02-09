@@ -1,5 +1,4 @@
 package com.akayush.eCommerceDemo.Model;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
@@ -15,10 +14,9 @@ public class CartItem {
     @JoinColumn(name="user_id")
     private User user;
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) // Ignore Hibernate-related properties
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Product product;
     private int quantity;
-    //private double totalPrice;
 
     @ManyToOne
     @JoinColumn(name = "checkout_id")

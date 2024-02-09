@@ -1,5 +1,4 @@
 package com.akayush.eCommerceDemo.Repository;
-
 import com.akayush.eCommerceDemo.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 

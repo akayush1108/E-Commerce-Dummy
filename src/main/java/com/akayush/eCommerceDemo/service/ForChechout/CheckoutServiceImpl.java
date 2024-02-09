@@ -38,21 +38,18 @@ public class CheckoutServiceImpl implements CheckoutService {
         User user = userRepository.findById(userId).orElse(null);
 
         if (user != null) {
-            // Check if there's an existing checkout for the user
             Checkout existingCheckout = checkoutRepository.findByUser(user);
 
             if (existingCheckout != null) {
-                // Update existing checkout with new cart items and total price
                 List<CartItem> cartItems = cartItemRepository.findByUserId(userId);
                 existingCheckout.getCartItems().clear(); // Remove existing cart items
                 existingCheckout.getCartItems().addAll(cartItems);
                 double totalPrice = calculateTotalPrice(cartItems);
                 existingCheckout.setTotalPrice(totalPrice);
 
-                // Save the updated checkout
                 return checkoutRepository.save(existingCheckout);
-            } else {
-                // Create a new Checkout instance and associate it with the user, cart items, and total price
+            }
+            else {
                 Checkout newCheckout = new Checkout();
                 newCheckout.setUser(user);
 
@@ -65,11 +62,10 @@ public class CheckoutServiceImpl implements CheckoutService {
                 double totalPrice = calculateTotalPrice(cartItems);
                 newCheckout.setTotalPrice(totalPrice);
 
-                // Save the new Checkout entity with associated CartItem entities
                 return checkoutRepository.save(newCheckout);
             }
-        } else {
-            // Handle the case when the user is not found
+        }
+        else {
             return null;
         }
     }
@@ -82,7 +78,6 @@ public class CheckoutServiceImpl implements CheckoutService {
             int quantity = cartItem.getQuantity();
 
             if (product != null) {
-                // Add product price multiplied by quantity to the total price
                 totalPrice += product.getPrice() * quantity;
             }
         }

@@ -19,8 +19,5 @@ public class CheckoutController {
     @PostMapping
     public Checkout processCheckout(@RequestBody CheckoutDto checkoutDto) {
         return checkoutService.processCheckout(checkoutDto);
-        //return "Checkout processed successfully!";
     }
-
-    // Additional methods for order-related API endpoints
 }

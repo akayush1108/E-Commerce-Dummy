@@ -1,8 +1,6 @@
 package com.akayush.eCommerceDemo.Model;
-
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +15,6 @@ public class Product {
 
     @ManyToMany(mappedBy = "products")
     private List<Billing> billings;
-
-    // other methods...
 
     public void addBilling(Billing billing) {
         if (billings == null) {

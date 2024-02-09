@@ -1,15 +1,12 @@
 package com.akayush.eCommerceDemo.Model;
-
-import com.akayush.eCommerceDemo.PaymentStatus;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.List;
 
-// Billing.java
+
 @Data
 @Entity
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property ="id" )

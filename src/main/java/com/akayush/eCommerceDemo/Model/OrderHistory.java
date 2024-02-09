@@ -1,5 +1,4 @@
 package com.akayush.eCommerceDemo.Model;
-
 import com.akayush.eCommerceDemo.PaymentStatus;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -31,8 +30,6 @@ public class OrderHistory {
     private double totalAmount;
     private PaymentStatus paymentStatus;
     private String transactionId;
-
-    // Getters and setters
 
 
     public Long getId() {
