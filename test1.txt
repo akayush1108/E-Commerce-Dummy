@@ -3,6 +3,7 @@ agwrgwhg
 qwer
 <<<<<<< HEAD
 line 3
+line 4
 =======
 <<<<<<< HEAD
 add data from newtest file
