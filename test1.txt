@@ -21,3 +21,8 @@ client1
 client2
 test3
 test4
+<<<<<<< HEAD
+=======
+server1
+server2
+>>>>>>> a86fa7a (commit8)
