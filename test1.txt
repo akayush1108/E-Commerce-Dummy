@@ -18,6 +18,3 @@ for private repo 1
 test1
 test2
 client1
-client2
-test3
-test4
