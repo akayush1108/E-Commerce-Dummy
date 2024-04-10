@@ -1,4 +1,12 @@
+data of fileB
 agwrgwhg
 qwer
+<<<<<<< HEAD
 add data from newtest file
 my test1 file
+=======
+new data of fileA
+for private repo
+private repo 2
+for private repo 1
+>>>>>>> 8e8a424509e702cf48b5fd6bf0a15fbb1e0863f9
